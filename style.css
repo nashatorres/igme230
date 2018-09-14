@@ -3,31 +3,47 @@
 
 }
 
+/*I was going to set an exact width and height for my container, but my media queries weren't working, so I just kept it at a max-width of 100% of the viewport*/
 
 .container {
     max-width: 100%;
 }
 
-.nav {
+
+
+.nav:link {
     font-family: 'Questrial', sans-serif;
-    padding-top: 30px;
+    padding-top: 15px;
     margin-right: 20px;
     display: block;
     float: right;
 }
 
-a {
+/*I gave my nav a specific class because the styles were going to differ from the navigation that is used for the exercises and projects section*/
+
+a.nav {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
     color: #6D6D6D;
     margin: 20px;
     font-weight: lighter;
+    font-family: 'Questrial', sans-serif;
 }
 
-a:active {
-    color: black;
+/*This styling refers to the exercises and projects section. Its practically the same styling as the nav, except the font size is bigger*/
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #6D6D6D;
+    margin: 20px;
+    font-weight: lighter;
+    font-family: 'Questrial', sans-serif;
+
 }
 
+
+/*I floated my logo left because I want it to remain on the left side of the screen despite the viewport size*/
 
 .logo {
     float: left;
@@ -37,12 +53,16 @@ a:active {
     margin-left: 40px;
 }
 
+/*My image is floating right to the screen because I want it to remain on the right side despite the viewport size. I put 120px of padding on the bottom so that the exercises section would be pushed down*/
+
 .me {
     padding-top: 80px;
     padding-bottom: 120px;
     float: right;
     max-width: 80%;
 }
+
+/*This is the styling for the bigger text you see overlapping the image. I put a z-index of 1 because with my span tags, the text was appearing behind the image and I wanted it to be over the image*/
 
 h1 {
     font-family: 'Heebo', sans-serif;
@@ -58,6 +78,7 @@ h1 {
 }
 
 
+/*This is the div for my header text. I put it to float left because I wanted it to overlap the image*/
 
 .Hey {
     float: left;
@@ -96,13 +117,23 @@ h2 {
     text-align: center;
 }
 
+/*This is the div for the exercises section. I centered it using margin 0 auto because I wanted it centered below the image. I also used clear:right so that it doesn't affect the float and vice versa*/
+
 .exercises {
     margin: 0 auto;
     clear: right;
     text-align: center;
 }
 
+/*This is the div for the projects section. The same styling used above is applied here as well*/
 
+.projects {
+    margin: 0 auto;
+    clear: right;
+    text-align: center;
+}
+
+/*This is the yellow square that you see next to each subheader. I used inline block so that the square was on the same block as the subheader*/
 
 .square {
     width: 17px;
@@ -111,25 +142,52 @@ h2 {
     display: inline-block;
 }
 
+/*This styling is affecting the h2 header inside of the exercises div. I targeted the h2 this way so that the inline-block would apply without it reformatting. Had I targeted it on its own, the yellow square would reformat all the way to the left*/
+
 .exercises h2 {
     display: inline-block;
     padding-left: 5px;
     padding-bottom: 30px;
 }
 
+/*This div formats the other 4 divs inside of it so that they are on the same line. This is being accomplished using display: inline-block*/
 
 .exercisesgrid div {
     display: inline-block;
-    margin: 30px;
+    margin: 15px;
     width: 145px;
     text-align: left;
+    padding-bottom: 90px;
+}
+
+/*Like the exercises h2, this is targeting the h2 inside of the projects div. The inline-block is ensuring that the h2 remains on the same line as the yellow square*/
+
+.projects h2 {
+    display: inline-block;
+    padding-left: 5px;
     padding-bottom: 30px;
 }
+
+/*This is essentially doing the same as the exercisegrid div where its ensuring that the divs inside of this are on the same line on the screen*/
+
+.exercisesgrid projects {
+    display: inline-block;
+    margin: 15px;
+    width: 145px;
+    text-align: left;
+    padding-bottom: 90px;
+}
+
+/*The break-word attribute is so that the text box wouldnt go on forever across the screen. This breaks up the content and allows for some margins in between each text box*/
 
 p {
 
     overflow-wrap: break-word;
     text-align: left;
+    font-size: 17px;
+    color: #6D6D6D;
+    margin: 20px;
+    font-weight: lighter;
+    font-family: 'Questrial', sans-serif;
+
 }
-
-
