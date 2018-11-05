@@ -200,10 +200,12 @@ a:hover {
 
 li {
     list-style-type: none;
+    color: black;
 }
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 /*these next items customize the hamburger menu*/
