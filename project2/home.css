@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    padding-right: 2.5px;
+    margin: 0;
+    position: relative;
+}
+
+/*fit images to grid spaces */
+
+.homepic {
+    width: 100%;
+    height: 100%;
+}
+
+/*when small, fit gridspaces to 100% of screen width*/
+
+.gridspace {
+    width: 100%;
+    height: 90%;
+    margin: 1%;
+
+}
+
+/*set up grid*/
+
+#wrapper {
+    width: auto;
+    display: grid;
+    grid-template-areas: "bock1" "bock2" "bock3" "bock4";
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+}
+
+
+/* area definitions */
+
+#box1 {
+    grid-area: bock1;
+}
+
+#box2 {
+    grid-area: bock2;
+}
+
+#box3 {
+    grid-area: bock3;
+}
+
+#box4 {
+    grid-area: bock4;
+}
+
+.top {
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+/* put links on right */
+
+.navbar {
+    float: right;
+
+}
+
+/* font changes to links */
+
+.nav {
+    visibility: hidden
+}
+
+/* anything done to the name */
+
+.name {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    margin: 0px;
+    padding: 20px;
+    padding-left: 35px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+/* hover effects for name */
+
+a:hover {
+    color: rgba(170, 170, 170, .5);
+}
+
+/* hover effects for links */
+
+.nav:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+/* hover effects for images */
+
+.gridspace:hover .overlay {
+    opacity: 1;
+}
+
+
+/* font styles for the big line of text under the navbar */
+
+#mid {
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+/* overlay */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.text {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.hamburger-menu {
+    width: 30px;
+    height: 2px;
+    background-color: #111;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    user-select: none;
+}
+
+/*when large, set each row to 2 gridspaces per and adjust sizes*/
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        display: grid;
+        grid-template-areas: "bock1 bock2" "bock3 bock4";
+        grid-template-columns: 1fr 1fr;
+        padding-right: 50px;
+        padding-left: 35px;
+    }
+    .gridspace {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+
+    }
+    .nav {
+
+        letter-spacing: 0.16em;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        font-size: 12px;
+        color: rgba(170, 170, 170, 1);
+        margin: 5px;
+        visibility: visible;
+    }
+    .hamburger-menu {
+        visibility: hidden;
+    }
+    .menu {
+        visibility: hidden;
+    }
+    .para {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: black;
+    }
+
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*these next items customize the hamburger menu*/
+#menu-overlay li {
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.line {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 4px 0;
+}
+/*this customizes the cursor once it is over the menu*/
+.menu input {
+    cursor: pointer;
+    opacity: 0;
+}
+
+/*this customizes the actual menu*/
+#menu-overlay {
+    text-decoration: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 50px;
+    left: 0px;
+    text-align: right;
+    visibility: hidden;
+    z-index: 2;
+}
+
+
+
+.menu {
+    float: right;
+}
+
+a:visited {
+    color: black;
+}
+
+
+.head2 {
+    text-decoration: none;
+    text-align: center;
+    font-size: 27px;
+    color: black;
+    margin: 20px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.para {
+
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin: 15px;
+    margin-top: 0px;
+    padding-top: 10px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    padding-left: 23%;
+    padding-right: 23%;
+    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 60px;
+}
+
+.container {
+    text-align: center;
+}
+
+/*i gave my images custom names so that i can customize the mobile view*/
+.projHead {
+    text-decoration: none;
+    font-size: 27px;
+    color: black;
+    margin: 20px;
+    margin-bottom: 0px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.projP {
+
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin: 15px;
+    margin-top: 0px;
+    padding-top: 50px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 60px;
+
+
+}
+
+/*this customizes the navbar links*/
+.navbar a:visited {
+    color: rgba(170, 170, 170, 1);
+}
+
+/*these are the attributes i gave for the images on the project pages*/
+.pic {
+    max-width: 90%;
+    float: none;
+    margin-bottom: 15px;
+}
+
+.nash {
+    max-width: 80%;
+    float: none;
+    margin-bottom: 15px;
+}

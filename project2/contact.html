@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
+    <script>
+        //This function activates the hamburger menu. The hamburger menu has to be credited to Jonathan Suh because he worked on the animation and I used his code for this specific part; however, I made the function myself
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+     <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+
+
+        <!>
+<!-- This code calls the function being used in order for the hamburger menu to be activated       -->
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+        </div>
+        <!>
+        <div id="menu-overlay">
+            <ul>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+        </div>
+
+    </div>
+
+
+
+    <h2 class = "head2">Contact Me!</h2>
+
+    <p class = "para">One of my favorite things to do is come up with the best solutions for existing problems, even if this means trying over and over again. Allow me to be a part of your team! I'm actively seeking an internship for Summer 2019. Feel free to email or call me if you have any questions or general comments!
+
+
+
+    </p>
+
+    <p class = "para">nxt8989@rit.edu
+
+    </p>
+    <p class = "para">
+
+
+        585-230-4324
+    </p>
+
+</body>
+
+</html>

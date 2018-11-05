@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="resume.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+     <link rel="stylesheet" href="print.css" type="text/css" media="print">
+     <link href="hamburger.css" rel="stylesheet">
+
+     <script>
+        //This function activates the hamburger menu. The hamburger menu has to be credited to Jonathan Suh because he worked on the animation and I used his code for this specific part; however, I made the function myself
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+   <div class="printpage" onclick="window.print();return false;">Print this page</div>
+   <div class="print"></div>
+   <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+
+
+        <!>
+<!-- This code calls the function being used in order for the hamburger menu to be activated       -->
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+        </div>
+        <!>
+        <div id="menu-overlay">
+            <ul>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+        </div>
+
+    </div>
+
+
+    <div class="table">
+
+        <div class="leftcolumn">
+
+            <h1 class="Name">Nasha Torres</h1>
+
+            <h3>UX Designer</h3>
+
+            <h2>nxt8989@rit.edu</h2>
+
+            <h2>585.230.4324</h2>
+
+            <h4 class="caps">Education</h4>
+
+            <h2>RIT</h2>
+            <h2>New Media Design, BFA</h2>
+
+            <h2>Cumulative GPA: 3.6</h2>
+
+            <h4 class="caps">Languages</h4>
+            <h2>English</h2>
+
+            <h2>Spanish</h2>
+
+            <h4 class="caps">Skills</h4>
+
+            <h2>Adobe Suite</h2>
+
+            <h2>Cinema 4D</h2>
+            <h2>HTML/CSS</h2>
+            <h2>Javascript</h2>
+            <h2>Wireframing/Prototyping</h2>
+
+            <h4 class="caps">Interests</h4>
+
+            <h2>UI/UX Design</h2>
+            <h2>Visual Design</h2>
+            <h2>Interaction Design</h2>
+            <h2>Product Design</h2>
+            <h2>Mobile Design</h2>
+
+        </div>
+
+<!--    this is all of the html for the right column format-->
+        <div class="rightcolumn">
+
+            <h3>Work Experience</h3>
+
+            <h2 class="titles">Perficient Digital Labs</h2>
+
+            <h2>I did product design as well as UI/UX design for companies such as Facebook and Yamaha.</h2>
+
+
+            <h2 class="years">Summer 2018</h2>
+
+            <h2 class="titles">Designers Speak.</h2>
+
+            <h2>designers speak. is a side project that two other designers and I have been working on. It is a design podcast that not only teaches RIT designers skills, but inspires those who arent designers to learn more.</h2>
+
+
+            <h2 class="years">2018-Present</h2>
+
+            <h2 class="titles">WITR 89.7</h2>
+
+            <h2>I manage all of the members at the radio station, am in charge of recruitment, run member meetings, and am on eboard.</h2>
+
+
+            <h2 class="years">2018-Present</h2>
+
+
+            <h2 class="titles">RIT Writing Commons</h2>
+
+            <h2>I’m a peer writing consultant who helps students of all disciplines become better writers</h2>
+
+
+            <h2 class="years">2017-Present</h2>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

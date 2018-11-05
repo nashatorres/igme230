@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/*this makes a table with the two columns and adjusts the layout for mobile view*/
+.table:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.leftcolumn {
+    float: left;
+    width: 300px;
+    margin-left: 20%;
+    margin-bottom: 60px;
+}
+
+.rightcolumn {
+    float: right;
+    width: 300px;
+    margin-top: 118px;
+    margin-right: 20%;
+    margin-bottom: 60px;
+}
+
+/*i had to add custom headers because the resume utilzied so many different styles*/
+h1.Name {
+    text-decoration: none;
+    font-size: 24px;
+    color: #59A5E5;
+    font-weight: bolder;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #59A5E5;
+    margin: 20px;
+    margin-top: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+
+}
+
+
+h4.caps {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #59A5E5;
+    margin: 20px;
+    margin-top: 35px;
+    padding: 0px;
+    margin-bottom: 0px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    text-decoration: none;
+    font-size: 14px;
+    color: #696767;
+    font-weight: 400;
+    margin: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+h2.titles {
+    text-decoration: none;
+    font-size: 14px;
+    color: #545353;
+    font-weight: bolder;
+    margin: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+
+}
+
+h2.years {
+    text-decoration: none;
+    font-size: 14px;
+    color: #59A5E5;
+    font-weight: 400;
+    margin: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+p {
+
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin: 15px;
+    margin-top: 0px;
+    padding-top: 50px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 60px;
+
+
+}
+
+/* nav bar stuff */
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*this customizes the text within the menu*/
+.menu-overlay li {
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.line {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+.menu input {
+    cursor: pointer;
+    opacity: 0;
+}
+
+/*this customizes the menu*/
+.menu-overlay {
+    text-decoration: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 100px;
+    left: 0px;
+    text-align: right;
+    visibility: hidden;
+    z-index: 2;
+}
+
+
+
+.menu input[type=checkbox]:checked ~ .menu-overlay {
+    visibility: visible;
+}
+
+
+.menu {
+    float: right;
+}
+
+a:visited {
+    color: black;
+}
+
+.top {
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+/* put links on right */
+
+.navbar {
+    float: right;
+
+}
+
+/* font changes to links */
+
+.nav {
+    visibility: hidden
+}
+
+/* anything done to the name */
+
+.name {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    margin: 0px;
+    padding: 20px;
+    padding-left: 35px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+#menu-overlay li {
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    letter-spacing: 0.16em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+#menu-overlay {
+    text-decoration: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 100px;
+    left: 0px;
+    text-align: right;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.line {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+.menu input {
+    cursor: pointer;
+    opacity: 0;
+}
+
+/*this customize the print page button*/
+.printpage{
+    letter-spacing: 0.16em;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        font-size: 15px;
+        color: rgba(170, 170, 170, 1);
+        margin: 5px;
+    margin-left: 55px;
+    margin-top: 20px;
+        visibility: visible;
+
+}
+
+/*this media query is being used to adjust the layout in mobile*/
+@media screen and (min-width: 760px) {
+    .nav {
+
+        letter-spacing: 0.16em;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        font-size: 12px;
+        color: rgba(170, 170, 170, 1);
+        margin: 5px;
+        visibility: visible;
+    }
+    .hamburger-menu {
+        visibility: hidden;
+    }
+    .menu {
+        visibility: hidden;
+    }
+}
