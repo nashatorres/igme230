@@ -1,7 +1,7 @@
 /* Don't use <script> tags in a linked js file! */
 
-$(".menuitem").click(function () {
-    $(".submenu").slideToggle(400);
+$(".menubox").click(function () {
+    $(this).find(".submenu").slideToggle();
 });
 
 let content = ("content1.txt") // sets default verse element
@@ -10,4 +10,9 @@ $("#content").load(content); // retrieves only default element
 $("#choose-content").change(function () {
     verse = $(this).val();
     $("#content").load(verse);
+});
+
+$("#choose-content").change(function(){
+    selection = $(this).val();
+    $("#content").load(select);
 });
