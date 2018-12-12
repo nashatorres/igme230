@@ -5,6 +5,7 @@
     position: relative;
 }
 
+
 /*this makes a table with the two columns and adjusts the layout for mobile view*/
 
 
@@ -12,7 +13,7 @@
 .leftcolumn {
     float: left;
     display: inline-block;
-    width: 250px;
+    width: 600px;
     margin-left: 35px;
 
 }
@@ -291,7 +292,7 @@ a:visited {
 
 }
 
-/*this media query is being used to adjust the layout in mobile*/
+/*this media query is being used to adjust the layout for desktop*/
 
 @media screen and (min-width: 760px) {
     .nav {
@@ -319,5 +320,19 @@ a:visited {
     margin-bottom: 60px;
 }
 
+
+}
+
+/*this media query is being used to adjust the layout for mobile once it reaches the iphone 5 breakpoint*/
+
+@media screen and (max-width: 400px) {
+
+    .leftcolumn {
+    float: left;
+    display: inline-block;
+    width: 300px;
+    margin-left: 15px;
+
+}
 
 }
