@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
+
+    <script>
+        //This function activates the hamburger menu. The hamburger menu has to be credited to Jonathan Suh because he worked on the animation and I used his code for this specific part; however, I made the function myself
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+        //This code is from Gregory Schier and allows the interaction to change titles on the home screen https://codepen.io/gschier/pen/jkivt
+        var TxtRotate = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtRotate.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 300 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function() {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('txt-rotate');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+
+        };
+    </script>
+</head>
+
+
+<body>
+
+
+
+    <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+
+
+
+        <!-- This code calls the function being used in order for the hamburger menu to be activated       -->
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+
+        <div id="menu-overlay">
+            <ul>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+            <a class="nav" href="documentation.html">Documentation</a>
+        </div>
+
+    </div>
+
+    <!--Typing Carousel by Greg Schier// allows me to choose which words will be switching out in the home screen -->
+    <div id="mid">
+        <h1>My name is Nasha and I'm
+            <h2><span class="txt-rotate" data-period="2000" data-rotate='[ "a UX", "an Interaction", "a 3D", "a Motion", "a Product" ]'></span> Designer</h2>
+        </h1>
+    </div>
+
+    <!-- This code makes a grid for the homepage. The grid is responsive so it should optimized for mobile   -->
+    <div id="wrapper">
+        <a id="box1" class="gridspace" href="legos.html">
+            <img src="assets/model1.png" alt="Lego Render" class="homepic">
+            <div class="overlay">
+                <div class="text">3D Renders</div>
+            </div>
+        </a>
+        <a id="box2" class="gridspace" href="dmv.html">
+            <img src="assets/iMacdmv.png" alt="DVM Form" class="homepic">
+            <div class="overlay">
+                <div class="text">DMV Form Design</div>
+            </div>
+        </a>
+        <a id="box3" class="gridspace" href="weather.html">
+            <img src="assets/MockUp_Visualsportfolio.png" alt="Weather App" class="homepic">
+            <div class="overlay">
+                <div class="text">Weather App</div>
+            </div>
+        </a>
+        <a id="box4" class="gridspace" href="theonion.html">
+            <img src="assets/onionmockup.png" alt="The Onion" class="homepic">
+            <div class="overlay">
+                <div class="text">The Onion Redesign</div>
+            </div>
+        </a>
+    </div>
+
+
+</body>
+
+</html>

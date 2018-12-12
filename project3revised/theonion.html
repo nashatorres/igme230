@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Onion App</title>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
+    <script>
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div id="menu-overlay">
+                <ul>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+            <a class="nav" href="documentation.html">Documentation</a>
+        </div>
+
+    </div>
+    <div class="container">
+        <img src="assets/onionmockup.png" alt="The Onion Interface" class="pic">
+        <h2 id="projHead">The Onion Redesign</h2>
+        <p id="projP">
+            The Onion is a satirical news site that serves the same function as your average media company; however, the aesthetics and functionality make users believe that what they are reading is fact. While this tactic may be effective, one huge problem with The Onion is that the user is faced with a plethora of information at first glance. This can become extremely overwhelming when the user first reaches the website, and makes it less likely that they'd stay on the site and read more articles. In order to design my solution, I used Illustrator for the static designs and I animated the mockup on After Effects. The skills required were UI design, UX design, animation, prototyping, and wireframing.
+
+            <br>
+
+            <img src="assets/flow.png" alt="Information Architecture 1" class="theonion">
+
+            <br>
+
+            <img src="assets/theonion1.jpg" alt="Information Architecture 2" class="onioninterface">
+
+            <br>
+
+            <img src="assets/theonion2.jpg" alt="Information Architecture 2" class="onioninterface">
+
+
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>

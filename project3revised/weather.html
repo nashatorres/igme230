@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Onion App</title>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
+    <script>
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div id="menu-overlay">
+                <ul>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+            <a class="nav" href="documentation.html">Documentation</a>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <img src="assets/MockUp_Visualsportfolio.png" alt="Phone Screens with Interfaces" class="pic">
+        <h2 id="projHead">Weather App Concept</h2>
+        <p id="projP">
+            The design industry is constantly evolving. This means that new design trends are always arising and it's important for designers to be able to adapt to these changes. While functionality is most important, beautiful design should not be disregarded either. Considering we were meant to only focus on visual design, processes such as exploring user flows and doing extensive user research were omitted. These concepts were meant to demonstrate my skills as related to aesthetics and elegant design. To execute the design of this app, I used Illustrator. I had to focus a lot on typography, visual hierarchy, and overall format so that UX was still being considered as well.
+            <br>
+
+            <img src="assets/mockupgif.gif" alt="iPhone Weather App Gifs" class="gif">
+
+            <br> The iPhone weather app is already visually interesting (as well as functional), but I was curious to see what this would look like with current visual design trends. I used this app as the foundation for most of my design choices.
+
+        </p>
+
+        <br>
+
+        <img src="assets/set.png" alt="Set of Screens" class="set">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>3D Renders</title>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
+    <script>
+        //functions to change the main image and text and to create hover effects
+        function changePix(n) {
+            var pics = document.getElementsByClassName("thumb");
+            var blurbs = document.getElementsByClassName("blurbs");
+            var titles = document.getElementsByClassName("titles");
+            document.getElementById("bigpic").src = pics[n].src;
+            document.getElementById("projP").textContent = blurbs[n].textContent;
+            document.getElementById("projHead").textContent = titles[n].textContent;
+            pics[n].style.opacity = 1;
+        }
+
+        function opacChange(pic) {
+            pic.style.opacity = 1;
+        }
+
+        function dim(pic) {
+            pic.style.opacity = .8;
+        }
+        //This function activates the hamburger menu. The hamburger menu has to be credited to Jonathan Suh because he worked on the animation and I used his code for this specific part; however, I made the function myself
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+
+        <div class="menu">
+
+            <div id="menu-overlay">
+                <ul>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+            <a class="nav" href="documentation.html">Documentation</a>
+        </div>
+
+    </div>
+
+    <div class="bigpicspace">
+        <img id="bigpic" alt="Focused Image" src="assets/model1.png">
+    </div>
+    <!-- image carousel -->
+    <div class="thumbnails">
+        <img class="thumb" src="assets/model1.png" onmouseover="opacChange(this)" alt="Lego Render" onmouseout="dim(this)" onclick="changePix(0)">
+        <img class="thumb" src="assets/model2.png" onmouseover="opacChange(this)" alt="Steam Engine" onmouseout="dim(this)" onclick="changePix(1)">
+        <img class="thumb" src="assets/model3.jpeg" onmouseover="opacChange(this)" alt="Whiskey Glasses" onmouseout="dim(this)" onclick="changePix(2)">
+    </div>
+
+    <div class="container">
+        <h2 id="projHead">3D Lego Render</h2>
+        <p id="projP">
+            One of my favorite parts about being in New Media Design is the fact that we learn so many different skills. One of my favorite things to work on was this 3D Lego render. In order to accomplish this, I used Cinema 4D and edited it a bit on photoshop for small adjustments such as lighting and color values. This process took a very long time considering the legos were extremely difficult to model. The most difficult part would be the bottom where the 3 holes are. I had to account for the middle hole which is attached to a straight line that splits down the lego itself. Other than that, the plate was super easy.
+
+        </p>
+
+    </div>
+
+    <!--text content for js -->
+    <div>
+        <p class="blurbs">One of my favorite parts about being in New Media Design is the fact that we learn so many different skills. One of my favorite things to work on was this 3D Lego render. In order to accomplish this, I used Cinema 4D and edited it a bit on photoshop for small adjustments such as lighting and color values. This process took a very long time considering the legos were extremely difficult to model. The most difficult part would be the bottom where the 3 holes are. I had to account for the middle hole which is attached to a straight line that splits down the lego itself. Other than that, the plate was super easy.</p>
+        <p class="blurbs"> One of the most difficult projects I've ever had to make in 3D was this steam engine. In total, it took about 2 weeks of 3D modeling all day and night because my steam engine consisted of a bunch of organic shapes that I had to sculpt myself. The most difficult aspect to construct was definitely the ferris wheel. Not only was making the structure of the sides challenging, but modeling the seats of the ferris wheel took about 5 hours. This was all of course done using Cinema 4D which is the software I always use in order to 3D model. Texturing and lighting was also done within Cinema. </p>
+        <p class="blurbs">My Whiskey glass and horse shoe model has got to be my favorite render of all time. While it was extremely challenging modeling the liquid inside of the whiskey glasses, I was super happy with the lighting of the render. It gives it a more sleek and sophisticated feel to it that a lot of my other rends don't have. My intention for this model was to have the audience feel like they're looking at an extravagant product, so successfully portraying that kind of mood was very rewarding. I also really love the fact that there's a bit of a Bokeh effect going on in the glasses from the lights in the scene. It adds more character and makes it more visually interesting. As with my other models, this was also made in Cinema 4D"
+        </p>
+
+        <p class="titles">3D Lego Render</p>
+        <p class="titles">Steam Engine</p>
+        <p class="titles">Whiskey Glasses</p>
+    </div>
+
+</body>
+
+</html>

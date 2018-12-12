@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DMV Form</title>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600" rel="stylesheet">
+    <link href="hamburger.css" rel="stylesheet">
+
+
+    <script>
+        function myFunction() {
+            var bButton = document.getElementById("burgerbutton");
+            var menuOp = document.getElementById("menu-overlay");
+            if (bButton.className == "hamburger--spin") {
+                bButton.className = "hamburger--spin is-active";
+                menuOp.style.visibility = "visible";
+            } else {
+                bButton.className = "hamburger--spin";
+                menuOp.style.visibility = "hidden";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top">
+        <a href="home.html" class="name">Nasha Torres</a>
+
+
+        <div class="menu">
+            <button id="burgerbutton" onclick="myFunction()" class="hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div id="menu-overlay">
+                <ul>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="navbar">
+            <a class="nav" href="aboutme.html">About Me</a>
+            <a class="nav" href="contact.html">Contact</a>
+            <a class="nav" href="resume.html">Resume</a>
+            <a class="nav" href="documentation.html">Documentation</a>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <img src="assets/iMacdmv.png" alt="DMV Redesign Interface" class="pic">
+        <h2 id="projHead">Interactive DMV Form</h2>
+        <p id="projP">
+            For my Interactive II course, we were assigned to create an interactive vehicle registration form from the existing NYS DMV that solves the lack of hierarchy and establishes clear organization, ultimately making filling out the form a more intuitive experience. I was the only designer on this project who carried out the universal UX design process. I did everything from research, user flows, wireframes, and iterations of my solution. To execute the design, I used Illustrator.
+
+            <br>
+
+            <img src="assets/designprocess.png" alt="Design Process" class="process">
+
+            <br>
+
+            <img src="assets/dmv1.png" alt="DMV Screen 1" class="dmv">
+
+            <br>
+
+            <img src="assets/dmv2.png" alt="DMV Screen 1" class="dmv">
+            <br> This was my very first time executing a UX process. I’m super grateful this project taught me how to do user flows, competitive analysis, and iterate designs. While I’m content with the outcome, it lacks the user personas, journey map, and deeply extensive research for me to declare it finished. I would like to revisit this project in the future as I grow into a more well-rounded UX designer.
+
+
+            <br>
+
+            <img src="assets/heart.png" alt="Heart" class="heart">
+
+
+
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
